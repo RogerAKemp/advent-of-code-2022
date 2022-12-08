@@ -23,7 +23,7 @@ defmodule Day05 do
     |> Enum.sort(fn ({key1, value1}, {key2, value2}) -> key1 < key2 end)
     |> Enum.reduce("", fn tuple, acc -> acc <>
       cond do
-        elem(tuple,1)==[] -> "-"
+        elem(tuple, 1)==[] -> "-"
         true -> hd(elem(tuple, 1))
       end
     end)
