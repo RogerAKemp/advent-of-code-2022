@@ -20,7 +20,7 @@ defmodule Day07 do
     |> String.split("$ ", trim: true)
     |> Enum.map(&String.split(&1, "\n", trim: true))
     |> Enum.reduce({%{"/" => %{}}, ["/"]}, fn group, acc -> process_command(group, acc) end)
-    |> (&elem(&1, 0)).()
+    |> elem(0)
     |> sum_file_sizes()
   end
 
